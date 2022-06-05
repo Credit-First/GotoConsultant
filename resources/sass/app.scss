@@ -1,0 +1,82 @@
+.status-section  {
+    margin:  5px !important;
+}
+
+.status-section .admin-page {
+  margin: 0% !important;
+}
+
+.profile-card-left .profile-header {
+    border-radius: 20px;
+    overflow: visible;
+    background-color: yellow !important;
+    height: 100% !important;
+}
+
+// 3. h2 title still not correct. You made it a bit bigger. Thats good. However it should be 44px on PC and 34px on mobile. this was the original requirement. (edited)
+
+@media only screen and (max-width: 768px) { /*PC*/
+    h2 {
+        //font-size: 44px !important;
+        //background-color: green !important;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    h2 {
+        font-size: 34px !important;
+        //background-color: yellow !important;
+    }
+
+    .chatter-pro .rate-session .avatar {
+        background: #e2e2e2;
+        border-radius: 50%;
+        background-image: url(/images/white-logo.svg);
+        background-size: 100px 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100px;
+        height: 100px;
+        //border: 3px dotted red !important;
+    }
+
+}
+
+.numberCircleRaised {
+    position: absolute;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -20px;
+    background: red !important;
+    border: 2px solid red;
+    color: white !important;
+    font: 18px Poppins Regular;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12pt;
+    z-index: 0;
+  }
+
+  .numberCircleRaised.consultant {
+    margin-top: -36px;
+    margin-left: -20px;
+  }
+
+  .numberCircle {
+    position: absolute;
+    margin-top: -15px !important;
+    margin-left: -27px !important;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    background: red !important;
+    border: 2px solid red;
+    color: white !important;
+    font: 18px Poppins Regular;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

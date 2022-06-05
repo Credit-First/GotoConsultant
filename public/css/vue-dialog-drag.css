@@ -1,0 +1,381 @@
+.dialog-drag {
+    animation-duration: 0.2s;
+    animation-name: dialog-anim;
+    animation-timing-function: ease-in;
+		height: max-content;
+		max-height: 400px;
+		width: max-content;
+    position: absolute;
+    z-index: 101;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+		transition: all 0.3s ease;
+		top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.dialog-drag .dialog-header {
+    color: #fff;
+    font-size: 0.9em;
+    padding: 0;
+    /* padding: 0.25em 3em 0.25em 1em; */
+    position: relative;
+    text-align: left;
+    width: auto;
+}
+.dialog-drag .dialog-header .title {
+    display: none;
+}
+.dialog-drag .dialog-header .buttons {
+    margin: 0.25em 0.25em 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 105;
+}
+.dialog-drag .dialog-header button.close {
+    -webkit-box-shadow: none;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+}
+.dialog-drag .dialog-header button.close:hover,
+.dialog-drag .dialog-header button.close:after {
+    content: "\2716";
+}
+.dialog-drag .dialog-body .modal-body {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 20px; */
+    padding: 0 20px 0 20px;
+}
+.dialog-drag .dialog-body .modal-body .avatar {
+	margin-bottom: 15px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.dialog-drag .dialog-body .modal-body .avatar.icon {
+	width: 130px;
+	height: 130px;
+}
+.dialog-drag .dialog-body .modal-body .default-pic {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: #e2e2e2;
+	display: flex;
+	justify-content: center;
+}
+.dialog-drag .dialog-body .modal-body .default-pic img {
+	width: 50px;
+}
+.dialog-drag .dialog-body .modal-body .content h2 {
+	font-size: 25px;
+    text-align: center;
+}
+.dialog-drag .dialog-body .modal-footer {
+	border: none;
+}
+.dialog-drag .dialog-body button {
+	border: none;
+	padding: 10px 25px;
+	border-radius: 25px;
+	color: #fff;
+	cursor: pointer;
+	flex: 1;
+}
+.dialog-drag .dialog-body button.accept {
+	background: #54dab1;
+}
+.dialog-drag .dialog-body button.accept:hover {
+	background: #2abd90;
+}
+.dialog-drag .dialog-body button.decline {
+	background: #c20000;
+}
+.dialog-drag .dialog-body button.decline:hover {
+	background: #990606;
+}
+.dialog-drag .dialog-body button.review {
+	color: #fff;
+	background: #6571fb;
+	border-radius: 25px;
+	border: none;
+}
+.dialog-drag .dialog-body button.review:hover {
+	background: #505ac7;
+}
+.dialog-drag .dialog-body button.img_btn {
+	background: transparent;
+    flex: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.dialog-drag .dialog-body button.img_btn img {
+	width: 60px;
+}
+.dialog-drag .dialog-body .modal-footer {
+    padding: 0 20px 20px 20px;
+}
+.dialog-drag.incoming-call {
+	max-width: 320px;
+	max-height: 330px;
+}
+.dialog-drag.payment {
+	/* max-height: 540px; */
+    max-height: 600px;
+}
+.dialog-drag.payment .dialog-body .modal-body .avatar img {
+	width: 140px;
+}
+.dialog-drag.payment .dialog-body .modal-body .content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.dialog-drag.payment .dialog-body .modal-body .content .input-box {
+	margin: 10px 0px;
+	display: flex;
+}
+.dialog-drag.payment .dialog-body .modal-body .content .input-box.hasError {
+	border: 1px solid red;
+}
+.dialog-drag.payment .dialog-body .modal-body .content .input-box input {
+	padding: 5px 10px;
+	border: 1px solid #d2d2d2;
+}
+.dialog-drag.payment .dialog-body .modal-body .content .input-box label {
+	background: #f5f5f5;
+	border: 1px solid #d2d2d2;
+	border-left: none;
+	margin: 0;
+	height: 38px;
+	width: 38px;
+	padding: 7px 5px;
+	font-size: 15px;
+}
+.dialog-drag.payment .dialog-body .modal-body .content h2 {
+	margin-bottom: .5rem;
+}
+.dialog-drag.payment .dialog-body .modal-body .content p {
+	margin-bottom: 1rem;
+}
+.dialog-drag.payment .dialog-body .modal-body .content p.total {
+	margin: 0;
+}
+.dialog-drag.review {
+	max-height: 570px;
+}
+.dialog-drag.review .dialog-body .modal-body .content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.dialog-drag.review .dialog-body .modal-body .content .rate-stars {
+	display: flex;
+	flex-direction: row;
+	padding: 20px 0;
+}
+.dialog-drag.review .dialog-body .modal-body .content .rate-stars p {
+	font-size: 20px;
+}
+.dialog-drag.review .dialog-body .modal-body .content .rate-stars img {
+	margin-right: 8px;
+	width: 28px;
+	height: 28px;
+	transition: all .3s ease-in-out;
+}
+.dialog-drag.review .dialog-body .modal-body .content .rate-stars img:last-child {
+	margin: 0;
+}
+.dialog-drag.review .dialog-body .modal-body .content textarea {
+	height: 150px;
+	padding: 5px;
+	outline: none;
+}
+.dialog-drag.session {
+	z-index: 102;
+}
+.dialog-drag.session .dialog-body .modal-body p {
+	margin-top: 0;
+	padding: 0 45px;
+}
+.dialog-drag.session .dialog-body .modal-body .button-group {
+	display: flex;
+	margin-top: 20px;
+	width: 100%;
+}
+.dialog-drag.session .dialog-body .modal-body .input-box {
+	margin: 10px 0px;
+	display: flex;
+}
+.dialog-drag.session .dialog-body .modal-body .input-box.hasError {
+	border: 1px solid red;
+}
+.dialog-drag.session .dialog-body .modal-body .input-box input {
+	padding: 5px 10px;
+}
+.dialog-drag.session .dialog-body .modal-body .input-box label {
+	background: #f5f5f5;
+	border: 1px solid #a9a9a9;
+	border-left: none;
+	margin: 0;
+	height: 38px;
+	width: 38px;
+	padding: 5px;
+}
+.dialog-drag.connect .dialog-body .modal-body p {
+	font-size: 16px;
+	line-height: 20px;
+}
+.dialog-drag.connect .dialog-body .modal-body span {
+	font-size: 20px;
+}
+.dialog-drag.connect .dialog-body .modal-footer .btn {
+	display: flex;
+	padding: 10px;
+	border-radius: 25px;
+	width: 100%;
+	justify-content: center;
+	background: #44dabc;
+}
+.dialog-drag.connect .dialog-body .modal-footer .btn h3{
+	font-size: 20px;
+	color: #fff;
+	margin: 0 5px 0 0;
+}
+.dialog-drag.connect .dialog-body .modal-footer .btn.decline {
+	background: #990606;
+}
+.dialog-drag.connect .dialog-body .modal-footer .btn.notAnswered {
+	background: #ff8557;
+}
+.dialog-drag.call .dialog-body .modal-header {
+	padding: 5px 10px;
+	display: flex;
+	align-items: center;
+}
+.dialog-drag.call .dialog-body {
+	margin-top: 20px;
+}
+.dialog-drag.call .dialog-body .modal-header {
+	padding: 2px 10px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 21px;
+    width: calc(100% - 65px);
+    border: none;
+}
+.dialog-drag.call .dialog-body .modal-header .time-status, .dialog-drag.call .dialog-body .modal-header .right-end {
+	display: flex;
+	align-items: center;
+}
+.dialog-drag.call .dialog-body .modal-header img {
+	width: 23px;
+}
+.dialog-drag.call .dialog-body .modal-header p {
+	margin: 0;
+	padding: 4px 0 0 4px;
+}
+.dialog-drag.call .dialog-body .modal-header .right-end button {
+	font-size: 15px;
+	padding: 2px 10px;
+	margin-right: 5px;
+	color: #fff;
+	border: none;
+	border-radius: 25px;
+	box-shadow: inset 0 0 1px;
+	flex: auto;
+}
+.dialog-drag.call .dialog-body .modal-header .right-end button.pause {
+	background: #ff8557;
+}
+.dialog-drag.call .dialog-body .modal-header .right-end button.continue {
+	background: #54dab1;
+}
+.dialog-drag.call .dialog-body .modal-header .right-end button.end {
+	background: #ff4246;
+}
+.dialog-drag.call .dialog-body .modal-body {
+	background: #000;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+.dialog-drag.call .dialog-body .modal-body .self {
+	width: 150px;
+	height: 100px;
+	position: absolute;
+	bottom: 35px;
+	right: 15px;
+}
+.dialog-drag.call .dialog-body .modal-body .main {
+	width: 100%;
+	height: 100%;
+}
+.dialog-drag.call .dialog-body .modal-body .main div {
+	width: 100%;
+	height: 100%;
+}
+.dialog-drag.call .dialog-body .modal-body .main video {
+	width: 100%;
+	height: 100%;
+}
+.dialog-drag.call .dialog-body .modal-body .self video {
+	width: 150px;
+}
+.dialog-drag.call .dialog-body .modal-body .btn-group {
+	position: absolute;
+	bottom: 35px;
+}
+.dialog-drag.call .dialog-body .modal-body .btn-group button {
+	background: transparent;
+	border: none;
+	margin: 0 10px;
+	padding: 0;
+}
+.dialog-drag.call .dialog-body .modal-body .btn-group button img {
+	width: 40px;
+}
+@-webkit-keyframes dialog-anim {
+    0% {
+        -webkit-transform: scaleX(0.1);
+        opacity: 0;
+        transform: scaleX(0.1);
+    }
+    50% {
+        -webkit-transform: rotate(1deg);
+        transform: rotate(1deg);
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes dialog-anim {
+    0% {
+        -webkit-transform: scaleX(0.1);
+        opacity: 0;
+        transform: scaleX(0.1);
+    }
+    50% {
+        -webkit-transform: rotate(1deg);
+        transform: rotate(1deg);
+    }
+    to {
+        opacity: 1;
+    }
+}

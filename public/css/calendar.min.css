@@ -1,0 +1,11 @@
+#calendar{ width: 800px; font-family: helvetica, arial, verdana, sans-serif; font-size: 0.917em; margin: 40px 30px 0 30px; }
+#calendar thead tr.calendar-heading-days th{ text-align: center; font-weight: normal; }
+#calendar tbody tr td{ width: 100px; height: 80px; border-top: 1px solid #b8b096; border-right: 1px solid #b8b096; }
+#calendar tbody tr td.last{ border-right: none; }
+#calendar tbody tr td.today{ background: #b8b096; }
+#calendar tbody tr td ul{ margin: 0 0.5em; }
+#calendar tbody tr td a{ color: #fff; text-decoration: none; font-size: 10px; color: white; line-height: 11px; display: block; width: 100%; margin: 2px 0; padding: 1px 2px; }
+#calendar tbody tr td a.calendar-event-blue{ color: blue; background: blue; }
+#calendar tbody tr td a.calendar-event-red{ color: red; background: #bb2f2d; }
+#calendar tbody tr td a.calendar-event-orange{ color: #d53b27; background: #FF6600; }
+#calendar tbody tr td span.calendar-cell-date{ display: block; text-align: right; padding: 0.25em 0.5em; }
